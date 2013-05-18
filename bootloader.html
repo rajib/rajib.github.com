@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <title>
+      bootloader
+    </title>
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 60px;
+      }
+      
+      /* Custom container */
+      .container {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .container > hr {
+        margin: 60px 0;
+      }
+      
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 80px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 100px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+      
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+      /*Page load Indicator*/
+      #pageLoading{
+          position:absolute;
+          z-index: 100;
+          left:50%;
+          top:50%;
+          bottom:50%;
+          color:#333;
+          font-size:18px;
+          width:32px;
+          height:32px;
+          padding:10px;
+          margin:0px auto;
+          font-family:Tahoma, Geneva, sans-serif
+      }
+
+      #backdropPageLoading{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 10;  
+      }
+
+      /*print css*/
+      .com { color: #93a1a1; }
+      .lit { color: #195f91; }
+      .pun, .opn, .clo { color: #93a1a1; }
+      .fun { color: #dc322f; }
+      .str, .atv { color: #D14; }
+      .kwd, .prettyprint .tag { color: #1e347b; }
+      .typ, .atn, .dec, .var { color: teal; }
+      .pln { color: #48484c; }
+
+      .prettyprint {
+        padding: 8px;
+        background-color: #f7f7f9;
+        border: 1px solid #e1e1e8;
+      }
+      .prettyprint.linenums {
+        -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+           -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+                box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+      }
+
+      /* Specify class=linenums on a pre to get line numbering */
+      ol.linenums {
+        margin: 0 0 0 33px; /* IE indents via margin-left */
+      }
+      ol.linenums li {
+        padding-left: 12px;
+        color: #bebec5;
+        line-height: 20px;
+        text-shadow: 0 1px 0 #fff;
+      }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(window).bind('beforeunload', function() { 
+          $("#backdropPageLoading").show();
+          $("#pageLoading").show();
+      });
+      $(window).bind('load', function() { 
+          $("#pageLoading").hide();
+          $("#backdropPageLoading").hide();
+      });
+    </script>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/fortawesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- page Loader -->
+    <div id="backdropPageLoading" style="display: block;"></div>
+    <div id="pageLoading" align="center">
+      <img src="assets/img/big-loader.gif" class="img-polaroid img-rounded">
+    </div>
+    <!-- page Loader end -->  
+      
+    <div class="container">
+      
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>
+          Bootloader!
+        </h1>
+<!--         <p class="lead">
+          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        </p> -->
+        <a href="bootloader.html" class="btn btn-large btn-success">
+          <i class="icon-refresh icon-white" title="Reload"></i>
+          Reload me
+        </a>
+        <br>
+        or [ctrl + shift + r] if I am too fast
+      </div>
+      
+      <hr>
+      
+      <!-- Example row of columns -->
+      <div class="row-fluid">
+        <div class="span12">
+
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  HTML
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                  <xmp>
+                    <div id="backdropPageLoading" style="display: block;"></div>
+                    <div id="pageLoading" align="center">
+                      <img src="assets/img/big-loader.gif" class="img-polaroid img-rounded">
+                    </div>                  
+                  </xmp>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  CSS
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <xmp>
+                    #pageLoading{
+                        position:absolute;
+                        z-index: 100;
+                        left:50%;
+                        top:50%;
+                        bottom:50%;
+                        color:#333;
+                        font-size:18px;
+                        width:32px;
+                        height:32px;
+                        padding:10px;
+                        margin:0px auto;
+                        font-family:Tahoma, Geneva, sans-serif
+                    }
+
+                    #backdropPageLoading{
+                      display: none;
+                      position: fixed;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      left: 0;
+                      background: rgba(255, 255, 255, 0.8);
+                      z-index: 10;  
+                    }                    
+                  </xmp>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
+                  Javascript
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <xmp>
+                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+                    <script type="text/javascript">
+                      $(window).bind('beforeunload', function() { 
+                          $("#backdropPageLoading").show();
+                          $("#pageLoading").show();
+                      });
+                      $(window).bind('load', function() { 
+                          $("#pageLoading").hide();
+                          $("#backdropPageLoading").hide();
+                      });
+                    </script>                    
+                  </xmp>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <table class="table">
+          <tr><td><img src="http://farm9.staticflickr.com/8332/8411386386_9dd74f43f5_h.jpg"></td></tr>
+          <tr><td> <img src="http://farm9.staticflickr.com/8360/8410280291_fbeb928ab4_b.jpg"> </td></tr>
+          <tr><td> <img src="http://farm9.staticflickr.com/8465/8416825970_7881582590_b.jpg"> </td></tr>
+          <tr><td> <img src="http://farm9.staticflickr.com/8212/8384831798_04cf7ab605_b.jpg"> </td></tr>
+          <tr><td> <img src="http://farm9.staticflickr.com/8088/8457348821_025d8cf335_b.jpg"> </td></tr>
+        </table>
+      </div>
+      
+      <hr>
+      
+      <div class="footer">
+        <p>
+          &copy; Do whatever you want
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- container -->
+  </body>
+</html>
